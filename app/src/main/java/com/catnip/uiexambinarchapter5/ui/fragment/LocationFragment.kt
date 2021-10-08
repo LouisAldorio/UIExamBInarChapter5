@@ -111,7 +111,13 @@ class LocationFragment : Fragment() {
         val uri = Uri.parse("geo${latitude},${longitude}")
         val mapIntent = Intent(Intent.ACTION_VIEW, uri)
         mapIntent.setPackage("com.google.android.apps.maps")
-        startActivity(mapIntent)
+
+        activity?.packageManager?.let {
+            mapIntent.resolveActivity(it)?.let {
+                startActivity(mapIntent)
+            }
+        }
+
     }
 
 }
