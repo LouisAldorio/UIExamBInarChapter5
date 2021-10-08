@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">UIExamBInarChapter5</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_title_current_location">Current Location Data :</string>
+    <string name="text_placeholder_longitude">Longitude : </string>
+    <string name="text_placeholder_latitude">Latitude :</string>
+    <string name="text_placeholder_provider">Provider :</string>
+    <string name="text_open_to_map">Open to map</string>
+    <string name="text_button_get_current_location">Get Current Location</string>
+    <string name="text_name_profile">Ibnu Malik</string>
+    <string name="text_profession_profile">Android Developer</string>
+    <string name="text_address_profile">Jakarta</string>
+    <string name="text_need_permission">You need Location Permission to Get Current Location!</string>
+</resources>
