@@ -74,7 +74,23 @@ class LocationFragment : Fragment() {
             }
         }
 
+        fuseLocationClient.lastLocation.addOnSuccessListener { location ->
+
+            if(location != null) {
+                longitude = location.longitude
+                latitude = location.latitude
+
+                binding.tvLatitudeLocation.text = getString(R.string.text_placeholder_format_latitude, latitude.toString())
+                binding.tvLongitudeLocation.text = getString(R.string.text_placeholder_format_longitude, longitude.toString())
+                binding.tvProviderLocation.text = getString(R.string.text_placeholder_format_provider, location.provider)
+            }
+
+
+        }.addOnFailureListener { exception ->
+            Toast.makeText(requireContext(), "${exception.message}", Toast.LENGTH_SHORT).show()
+        }
     }
+
 
     private val permissionRequestLauncher =
         registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { grantResults ->

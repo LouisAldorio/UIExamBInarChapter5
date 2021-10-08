@@ -25,12 +25,11 @@ class MainActivity : AppCompatActivity() {
     private fun setupViewPager() {
 
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
-        viewPagerAdapter.addFragment(ProfileFragment(), "Profile")
-        viewPagerAdapter.addFragment(LocationFragment(), "Current Location")
-        binding.vpTask.adapter = viewPagerAdapter
+        viewPagerAdapter.addFragment(ProfileFragment(), getString(R.string.tab_layout_text_profile))
+        viewPagerAdapter.addFragment(LocationFragment(), getString(R.string.tab_layout_text_current_location))
+        binding.vpMenu.adapter = viewPagerAdapter
 
-        //setting title for tab layout
-        TabLayoutMediator(binding.tlTask, binding.vpTask, true) { tab, position ->
+        TabLayoutMediator(binding.tlMenu, binding.vpMenu, true) { tab, position ->
             tab.text = viewPagerAdapter.getPageTitle(position)
         }.attach()
     }

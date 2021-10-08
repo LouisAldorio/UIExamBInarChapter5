@@ -4,12 +4,10 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.bumptech.glide.Glide
 import com.catnip.uiexambinarchapter5.R
 import com.catnip.uiexambinarchapter5.databinding.ActivityDetailBinding
 import com.catnip.uiexambinarchapter5.ui.data.ProfileData
-import com.catnip.uiexambinarchapter5.ui.fragment.ProfileFragment
 
 class DetailActivity : AppCompatActivity() {
 
@@ -25,6 +23,7 @@ class DetailActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
+        getIntentData()
     }
 
     private fun getIntentData() {

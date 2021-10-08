@@ -15,13 +15,11 @@ class ProfileFragment : Fragment() {
 
     private lateinit var binding : FragmentProfileBinding
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
+
         binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -35,7 +33,7 @@ class ProfileFragment : Fragment() {
             .placeholder(R.drawable.ic_launcher_background)
             .into(binding.ivImageProfile)
         binding.tvNameProfile.text = getString(R.string.text_name_profile)
-        binding.tvProfessionProfile.text = getString(R.string.text_profession_profile)
+        binding.tvProfessionProfile.text = getString(R.string.text_open_profile)
 
         navigateToDetail()
     }
@@ -54,6 +52,4 @@ class ProfileFragment : Fragment() {
     companion object {
         private const val IMAGE_PROFILE_URL = "https://avatars.githubusercontent.com/u/41815774?v=4"
     }
-
-
 }

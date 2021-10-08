@@ -12,4 +12,11 @@
     <string name="text_profession_profile">Android Developer</string>
     <string name="text_address_profile">Jakarta</string>
     <string name="text_need_permission">You need Location Permission to Get Current Location!</string>
+    <string name="tab_layout_text_profile">Profile</string>
+    <string name="tab_layout_text_current_location">Current Location</string>
+    <string name="text_open_profile">Open Profile</string>
+
+    <string name="text_placeholder_format_longitude" translatable="false">Longitude : %s</string>
+    <string name="text_placeholder_format_latitude" translatable="false">Latitude : %s</string>
+    <string name="text_placeholder_format_provider" translatable="false">Provider : %s</string>
 </resources>
